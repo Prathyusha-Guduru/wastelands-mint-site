@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wastelands Mint Site</title>
+
+    <link rel="stylesheet" href="https://nft.bueno.art/widget/v3/styles.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <img src="bck.png" alt="">
+        <button id="mint-btn">
+            <img src="btn.svg" alt="">
+        </button>
+
+        <div id="modal">
+            <div data-bueno-mint="NYv2OUCx3_zGfLNzNavry"></div>
+        </div>
+    </main>
+
+    <script type="module" crossorigin src="https://nft.bueno.art/widget/v3/index.js"></script>
+    <script>
+        let modalState = false;
+
+        document.getElementById('mint-btn').addEventListener('click',()=>{
+            modalState= !modalState;
+            
+            if(modalState){
+                document.getElementById('modal').style.display = 'unset'
+            }else{
+                document.getElementById('modal').style.display = 'none'
+            }
+        })
+
+
+    </script>
+</body>
+</html>
